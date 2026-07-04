@@ -1,0 +1,153 @@
+/* ============================================================
+   Oliva — Kaart page
+   Flat, print-menu style: cream throughout, no gradients,
+   no border-radius, thin gold hairlines between sections.
+   ============================================================ */
+
+.kaart-page main { background: var(--cream-warm); }
+
+/* This page has no dark hero photo behind the nav, so it can never rely on
+   the transparent-over-photo state — force the light/scrolled nav look
+   from the start, regardless of scroll position. */
+.kaart-page .nav:not(.is-scrolled) {
+  background: rgba(244,239,229,0.96);
+  box-shadow: 0 20px 50px rgba(30,36,25,0.12);
+  border-bottom: 1px solid rgba(184,156,90,0.12);
+}
+.kaart-page .nav:not(.is-scrolled) .nav__brand-sub,
+.kaart-page .nav:not(.is-scrolled) .nav__links a { color: var(--olive-mute); }
+.kaart-page .nav:not(.is-scrolled) .nav__toggle span { background: var(--olive-mute); }
+.kaart-page .nav:not(.is-scrolled) .nav__logo--dark { display: block; }
+.kaart-page .nav:not(.is-scrolled) .nav__logo--light { display: none; }
+.kaart-page .nav:not(.is-scrolled) .nav__social-link { color: var(--olive-mute); }
+
+.kaart-intro { padding: 148px var(--s-5) 0; }
+.kaart-intro__grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: var(--s-9);
+  align-items: center;
+  padding-bottom: var(--s-9);
+}
+.kaart-intro__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(40px, 6vw, 64px);
+  color: var(--ink-on-cream);
+  margin: var(--s-3) 0 var(--s-5);
+  line-height: 1;
+}
+.kaart-hairline {
+  width: 64px;
+  height: 1px;
+  background: var(--gold-soft);
+  margin-bottom: var(--s-6);
+}
+.kaart-intro__body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: var(--lh-relaxed);
+  color: var(--ink-on-cream-soft);
+  max-width: 52ch;
+  margin-bottom: var(--s-4);
+}
+.kaart-intro__signoff {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--gold-soft);
+  margin-top: var(--s-5);
+}
+.kaart-intro__photo {
+  min-height: 420px;
+  height: 100%;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 30px 70px rgba(30,36,25,0.15);
+}
+
+@media (max-width: 900px) {
+  .kaart-intro__grid { grid-template-columns: 1fr; gap: var(--s-6); }
+  .kaart-intro__photo { min-height: 280px; order: -1; }
+}
+
+.kaart-section {
+  padding: var(--s-8) var(--s-5);
+  border-top: 1px solid rgba(159,134,73,0.28);
+}
+.kaart-section:nth-of-type(even) { background: var(--cream-deep); }
+.kaart-section__inner { max-width: 900px; margin: 0 auto; width: 100%; }
+.kaart-section__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-3);
+  color: var(--gold-soft);
+  margin-bottom: var(--s-2);
+}
+.kaart-section__label::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--gold-soft);
+}
+.kaart-section__note {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--ink-on-cream-faint);
+  margin-bottom: var(--s-7);
+}
+.kaart-section__label + .kaart-list,
+.kaart-section__label + .kaart-grid-3,
+.kaart-section__label + p + .kaart-list,
+.kaart-section__label + p + .kaart-grid-3 { margin-top: var(--s-6); }
+
+.kaart-list { display: flex; flex-direction: column; }
+.kaart-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-7);
+}
+.kaart-list__group-title {
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-on-cream);
+  margin-bottom: var(--s-4);
+}
+.kaart-list__group-title--spaced { margin-top: var(--s-7); }
+
+/* Flatten the reused drink-row component for this page: no card chrome */
+.kaart-page .drink-row { padding-left: var(--s-4); margin-bottom: var(--s-5); }
+.kaart-page .drink-row::before { background: var(--gold-soft); opacity: 0.6; }
+.kaart-page .drink-row:hover::before { opacity: 1; }
+.kaart-page .t-item { color: var(--ink-on-cream); font-size: 19px; }
+.kaart-page .t-price {
+  color: var(--gold-soft);
+  font-size: 17px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.kaart-page .t-desc { color: #4A4636; font-size: 14.5px; margin-top: 2px; }
+
+.kaart-allergy-note {
+  margin-top: var(--s-7);
+  font-family: var(--font-italic);
+  font-style: italic;
+  color: var(--ink-on-cream-soft);
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .kaart-grid-3 { grid-template-columns: 1fr; gap: var(--s-6); }
+}
+
+@media (max-width: 720px) {
+  .kaart-intro { padding-top: 128px; }
+  .kaart-section { padding: var(--s-7) var(--s-4); }
+}

@@ -1,0 +1,76 @@
+/* ============================================================
+   Oliva — Textures
+   Page surfaces (dark forest green + warm cream) with subtle
+   grain, vignettes, and faint behind-logo olive watermark.
+   ============================================================ */
+
+/* ---------- Dark forest-green page ---------- */
+.oliva-page-dark {
+    background-color: var(--green-dark);
+    background-image:
+        /* top inner light */
+        radial-gradient(ellipse 80% 35% at 50% 0%, rgba(255,245,200,0.04) 0%, transparent 60%),
+        /* bottom shadow */
+        radial-gradient(ellipse 100% 35% at 50% 100%, rgba(0,0,0,0.45) 0%, transparent 70%),
+        /* corner shadows */
+        radial-gradient(circle at 0% 0%, rgba(0,0,0,0.30) 0%, transparent 24%),
+        radial-gradient(circle at 100% 0%, rgba(0,0,0,0.30) 0%, transparent 24%),
+        radial-gradient(circle at 0% 100%, rgba(0,0,0,0.40) 0%, transparent 26%),
+        radial-gradient(circle at 100% 100%, rgba(0,0,0,0.40) 0%, transparent 26%),
+        /* fine grain */
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch' seed='3'/><feColorMatrix values='0 0 0 0 0.85  0 0 0 0 0.78  0 0 0 0 0.55  0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-size: auto, auto, auto, auto, auto, auto, 240px 240px;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    background-blend-mode: screen, multiply, multiply, multiply, multiply, multiply, overlay;
+}
+
+/* ---------- Warm cream page ---------- */
+.oliva-page-cream {
+    background-color: var(--cream);
+    background-image:
+        /* warm top */
+        radial-gradient(ellipse 90% 40% at 50% 0%, rgba(255,250,235,0.45) 0%, transparent 65%),
+        /* bottom warm shadow */
+        radial-gradient(ellipse 100% 40% at 50% 100%, rgba(140,100,60,0.10) 0%, transparent 70%),
+        /* corner darkening */
+        radial-gradient(circle at 0% 0%, rgba(120,90,50,0.10) 0%, transparent 24%),
+        radial-gradient(circle at 100% 0%, rgba(120,90,50,0.10) 0%, transparent 24%),
+        radial-gradient(circle at 0% 100%, rgba(120,90,50,0.12) 0%, transparent 24%),
+        radial-gradient(circle at 100% 100%, rgba(120,90,50,0.12) 0%, transparent 24%),
+        /* paper grain */
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='2' stitchTiles='stitch' seed='8'/><feColorMatrix values='0 0 0 0 0.20  0 0 0 0 0.16  0 0 0 0 0.09  0 0 0 0.32 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-size: auto, auto, auto, auto, auto, auto, 240px 240px;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    background-blend-mode: normal, multiply, multiply, multiply, multiply, multiply, multiply;
+}
+
+/* ---------- Faint olive-branch watermark behind logo ---------- */
+.oliva-logo-watermark {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 460px;
+    height: 70px;
+    pointer-events: none;
+    opacity: 0.10;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 460 70' fill='none' stroke='%237B8A56' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round'><path d='M6 36 C 80 30, 160 30, 220 34'/><path d='M454 36 C 380 30, 300 30, 240 34'/><path d='M50 24 C 60 14, 78 10, 92 12 C 84 22, 68 26, 50 24 Z'/><path d='M100 22 C 110 12, 128 8, 142 10 C 134 20, 116 24, 100 22 Z'/><path d='M150 20 C 160 10, 178 6, 192 8 C 184 18, 166 22, 150 20 Z'/><path d='M40 46 C 50 56, 66 60, 80 58 C 72 50, 56 46, 40 46 Z'/><path d='M94 46 C 104 56, 120 60, 134 58 C 126 50, 110 46, 94 46 Z'/><path d='M148 46 C 158 56, 174 60, 188 58 C 180 50, 164 46, 148 46 Z'/><path d='M410 24 C 400 14, 382 10, 368 12 C 376 22, 392 26, 410 24 Z'/><path d='M360 22 C 350 12, 332 8, 318 10 C 326 20, 344 24, 360 22 Z'/><path d='M310 20 C 300 10, 282 6, 268 8 C 276 18, 294 22, 310 20 Z'/><path d='M420 46 C 410 56, 394 60, 380 58 C 388 50, 404 46, 420 46 Z'/><path d='M366 46 C 356 56, 340 60, 326 58 C 334 50, 350 46, 366 46 Z'/><path d='M312 46 C 302 56, 286 60, 272 58 C 280 50, 296 46, 312 46 Z'/><ellipse cx='120' cy='38' rx='5' ry='6' transform='rotate(-12 120 38)'/><ellipse cx='178' cy='36' rx='5' ry='6' transform='rotate(-10 178 36)'/><ellipse cx='340' cy='38' rx='5' ry='6' transform='rotate(12 340 38)'/><ellipse cx='282' cy='36' rx='5' ry='6' transform='rotate(10 282 36)'/></svg>");
+}
+.oliva-logo-watermark--dark { opacity: 0.12; }
+.oliva-logo-watermark--cream { opacity: 0.20; }
+
+/* ---------- Spread / display chrome ---------- */
+.oliva-stage {
+    background:
+        radial-gradient(ellipse 100% 60% at 50% 0%, #1F1B14 0%, #0E0C09 80%, #050402 100%);
+    min-height: 100vh;
+    padding: 64px 24px 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+}

@@ -1,0 +1,187 @@
+/* ============================================================
+   Oliva Italian Hospitality Design System — Tokens
+   colors_and_type.css
+   Brand reference: dark forest green + warm cream menu,
+   cream + olive Oliva wordmark, gold accents, serif type.
+   ============================================================ */
+
+/* ---------- Webfonts (Google Fonts) ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ============================================================
+   :root — all tokens
+   ============================================================ */
+:root {
+    /* ---------- Color: page surfaces ---------- */
+    --green-dark:      #1E2419;   /* primary dark page (forest) */
+    --green-darker:    #161B12;   /* deeper for depth, gradient bottom */
+    --green-vignette:  #232A1D;   /* slightly lifted */
+    --cream:           #EFEAE0;   /* primary cream page */
+    --cream-deep:      #E4DDCB;   /* warmer cream, edge tint */
+    --cream-warm:      #F4EFE5;   /* lightest cream highlight */
+
+    /* ---------- Color: ink ---------- */
+    --ink-on-dark:     #EFEAE0;   /* drink names on dark page */
+    --ink-on-dark-soft:#BFB59C;   /* descriptor on dark */
+    --ink-on-dark-faint:#7E7965;  /* footer on dark */
+    --ink-on-cream:    #1E2419;   /* drink names on cream */
+    --ink-on-cream-soft:#5F5A4B;  /* descriptor on cream */
+    --ink-on-cream-faint:#9A9485; /* footer on cream */
+
+    /* ---------- Color: brand accents ---------- */
+    --gold:            #B89C5A;   /* titles, prices on dark, section labels */
+    --gold-soft:       #9F8649;   /* section labels on cream, hairlines */
+    --gold-bright:     #C8AD66;   /* highlight (limited) */
+    --olive-leaf:      #7B8A56;   /* logo olive color */
+    --olive-mute:      #5A6440;   /* deeper olive */
+
+    /* ---------- Semantic ---------- */
+    --bg:              var(--green-dark);
+    --bg-alt:          var(--cream);
+    --fg:              var(--ink-on-dark);
+    --fg-muted:        var(--ink-on-dark-soft);
+    --rule:            var(--gold);
+    --accent:          var(--gold);
+
+    /* ---------- Type: families ---------- */
+    --font-display:   'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    --font-serif:     'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    --font-italic:    'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    --font-label:     'Inter', 'Helvetica Neue', Arial, sans-serif;
+    --font-body:      'Cormorant Garamond', 'Cormorant', Georgia, serif;
+
+    /* ---------- Type: roles ---------- */
+    --type-page-title: 54px;
+    --type-page-sub:   16px;
+    --type-section:    12px;     /* uppercase tracked */
+    --type-item:       17px;
+    --type-price:      15px;
+    --type-desc:       12.5px;
+    --type-footer:     9.5px;
+
+    /* line-heights */
+    --lh-tight:    1.05;
+    --lh-snug:     1.2;
+    --lh-normal:   1.45;
+    --lh-relaxed:  1.6;
+
+    /* letter-spacing */
+    --tr-tight:    -0.01em;
+    --tr-section:   0.22em;
+    --tr-footer:    0.20em;
+    --tr-cap:       0.06em;
+
+    /* ---------- Spacing (8px grid) ---------- */
+    --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px;
+    --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px;
+
+    /* ---------- Layout (A5) ---------- */
+    --a5-w:        559px;        /* 148mm @ 96dpi */
+    --a5-h:        794px;        /* 210mm @ 96dpi */
+    --page-pad-x:  56px;
+    --page-pad-top: 60px;
+    --page-pad-bottom: 60px;
+
+    /* ---------- Borders, radii, shadows ---------- */
+    --hair:        0.5px;
+    --rule-w:      1px;
+    --radius-0:    0;
+
+    --shadow-page: 0 40px 90px -35px rgba(0,0,0,0.75),
+                   0 14px 40px -16px rgba(0,0,0,0.45);
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+.oliva, body.oliva {
+    background: var(--green-darker);
+    color: var(--ink-on-dark);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: var(--lh-normal);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+}
+
+h1, h2, h3, h4 { margin: 0; font-weight: 400; }
+p { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+.oliva em, .oliva i { font-style: italic; }
+
+/* ============================================================
+   Type roles (utility classes)
+   ============================================================ */
+
+.t-page-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--type-page-title);
+    line-height: 1.0;
+    letter-spacing: -0.005em;
+    color: var(--gold);
+}
+.t-page-title--cream { color: var(--ink-on-cream); }
+
+.t-page-sub {
+    font-family: var(--font-italic);
+    font-style: italic;
+    font-weight: 400;
+    font-size: var(--type-page-sub);
+    color: var(--ink-on-dark-soft);
+    line-height: 1.3;
+}
+.t-page-sub--cream { color: var(--ink-on-cream-soft); }
+
+.t-section {
+    font-family: var(--font-label);
+    font-weight: 700;
+    font-size: var(--type-section);
+    letter-spacing: var(--tr-section);
+    text-transform: uppercase;
+    color: var(--ink-on-cream-faint);
+    line-height: 1.2;
+}
+.t-section--cream { color: rgba(239,234,224,0.62); }
+
+.t-item {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: var(--type-item);
+    color: var(--ink-on-dark);
+    line-height: 1.18;
+    letter-spacing: 0;
+}
+.t-item--cream { color: var(--ink-on-cream); }
+
+.t-price {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: var(--type-price);
+    color: var(--gold);
+    font-variant-numeric: tabular-nums oldstyle-nums;
+    line-height: 1.2;
+}
+.t-price--cream { color: var(--gold-soft); }
+
+.t-desc {
+    font-family: var(--font-italic);
+    font-style: italic;
+    font-weight: 400;
+    font-size: var(--type-desc);
+    color: var(--ink-on-dark-soft);
+    line-height: 1.35;
+    letter-spacing: 0.005em;
+}
+.t-desc--cream { color: var(--ink-on-cream-soft); }
+
+.t-footer {
+    font-family: var(--font-label);
+    font-weight: 400;
+    font-size: var(--type-footer);
+    letter-spacing: var(--tr-footer);
+    text-transform: uppercase;
+    color: var(--ink-on-dark-faint);
+}
+.t-footer--cream { color: var(--ink-on-cream-faint); }
