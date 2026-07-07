@@ -1,49 +1,96 @@
 /* ============================================================
    Oliva — Kaart page
-   Flat, print-menu style: cream throughout, no gradients,
-   no border-radius, thin gold hairlines between sections.
+   Flat, print-menu style: cream throughout, compact rows with
+   dotted price leaders, sticky category nav, thin gold hairlines.
    ============================================================ */
 
 .kaart-page main { background: var(--cream-warm); }
 
-/* This page has no dark hero photo behind the nav, so it can never rely on
-   the transparent-over-photo state — force the light/scrolled nav look
-   from the start, regardless of scroll position. */
-.kaart-page .nav:not(.is-scrolled) {
-  background: rgba(244,239,229,0.96);
-  box-shadow: 0 20px 50px rgba(30,36,25,0.12);
-  border-bottom: 1px solid rgba(184,156,90,0.12);
+/* This page has no dark hero photo behind the nav: the nav is static
+   (scrolls away) and always uses the light look. The sticky category
+   nav below it takes over as the persistent wayfinding. */
+.kaart-page .nav,
+.kaart-page .nav.is-scrolled {
+  position: static;
+  background: var(--cream-warm);
+  box-shadow: none;
+  border-bottom: 0;
+  padding: 20px 0 16px;
+  backdrop-filter: none;
 }
-.kaart-page .nav:not(.is-scrolled) .nav__brand-sub,
-.kaart-page .nav:not(.is-scrolled) .nav__links a { color: var(--olive-mute); }
-.kaart-page .nav:not(.is-scrolled) .nav__toggle span { background: var(--olive-mute); }
-.kaart-page .nav:not(.is-scrolled) .nav__logo--dark { display: block; }
-.kaart-page .nav:not(.is-scrolled) .nav__logo--light { display: none; }
-.kaart-page .nav:not(.is-scrolled) .nav__social-link { color: var(--olive-mute); }
+.kaart-page .nav .nav__brand-sub,
+.kaart-page .nav .nav__links a { color: var(--olive-mute); }
+.kaart-page .nav .nav__toggle span { background: var(--olive-mute); }
+.kaart-page .nav .nav__logo--dark { display: block; }
+.kaart-page .nav .nav__logo--light { display: none; }
+.kaart-page .nav .nav__social-link { color: var(--olive-mute); }
 
-.kaart-intro { padding: 148px var(--s-5) 0; }
+/* The mobile drawer has a dark background — keep its links cream there. */
+@media (max-width: 720px) {
+  .kaart-page .nav .nav__links a { color: rgba(239,234,224,0.88); }
+}
+
+/* ---------- Sticky category nav ---------- */
+.kaart-nav {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: rgba(244,239,229,0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(159,134,73,0.28);
+  border-bottom: 1px solid rgba(159,134,73,0.28);
+}
+.kaart-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--s-5);
+  display: flex;
+  gap: var(--s-5);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.kaart-nav__inner::-webkit-scrollbar { display: none; }
+.kaart-nav a {
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-on-cream-soft);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 14px 2px 12px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.kaart-nav a:hover { color: var(--ink-on-cream); }
+.kaart-nav a.is-active { color: var(--ink-on-cream); border-bottom-color: var(--gold); }
+
+/* ---------- Intro ---------- */
+.kaart-intro { padding: var(--s-6) var(--s-5) 0; }
 .kaart-intro__grid {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 0.8fr;
-  gap: var(--s-9);
+  gap: var(--s-8);
   align-items: center;
-  padding-bottom: var(--s-9);
+  padding-bottom: var(--s-7);
 }
 .kaart-intro__title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(40px, 6vw, 64px);
+  font-size: clamp(38px, 5vw, 56px);
   color: var(--ink-on-cream);
-  margin: var(--s-3) 0 var(--s-5);
+  margin: var(--s-3) 0 var(--s-4);
   line-height: 1;
 }
 .kaart-hairline {
   width: 64px;
   height: 1px;
   background: var(--gold-soft);
-  margin-bottom: var(--s-6);
+  margin-bottom: var(--s-5);
 }
 .kaart-intro__body {
   font-family: var(--font-body);
@@ -58,10 +105,10 @@
   font-style: italic;
   font-size: 18px;
   color: var(--gold-soft);
-  margin-top: var(--s-5);
+  margin-top: var(--s-4);
 }
 .kaart-intro__photo {
-  min-height: 420px;
+  min-height: 340px;
   height: 100%;
   border-radius: 20px;
   background-size: cover;
@@ -70,47 +117,70 @@
 }
 
 @media (max-width: 900px) {
-  .kaart-intro__grid { grid-template-columns: 1fr; gap: var(--s-6); }
-  .kaart-intro__photo { min-height: 280px; order: -1; }
+  .kaart-intro__grid { grid-template-columns: 1fr; gap: var(--s-5); }
+  .kaart-intro__photo { min-height: 220px; order: -1; }
 }
 
+/* ---------- Sections ---------- */
 .kaart-section {
-  padding: var(--s-8) var(--s-5);
-  border-top: 1px solid rgba(159,134,73,0.28);
+  padding: var(--s-7) var(--s-5) var(--s-6);
+  border-top: 1px solid rgba(159,134,73,0.24);
+  scroll-margin-top: 56px;
 }
 .kaart-section:nth-of-type(even) { background: var(--cream-deep); }
 .kaart-section__inner { max-width: 900px; margin: 0 auto; width: 100%; }
-.kaart-section__label {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--s-3);
+.kaart-section__eyebrow {
+  font-family: var(--font-label);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: var(--tr-section);
+  text-transform: uppercase;
   color: var(--gold-soft);
   margin-bottom: var(--s-2);
 }
-.kaart-section__label::before {
-  content: '';
-  width: 24px;
+.kaart-section__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 3.5vw, 36px);
+  color: var(--ink-on-cream);
+  margin-bottom: 2px;
+  line-height: 1.08;
+}
+.kaart-section__tagline {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ink-on-cream-soft);
+  margin-bottom: var(--s-4);
+}
+.kaart-section__hairline {
+  width: 100%;
   height: 1px;
-  background: var(--gold-soft);
+  background: rgba(159,134,73,0.28);
+  margin-bottom: var(--s-5);
 }
 .kaart-section__note {
   font-family: var(--font-italic);
   font-style: italic;
   font-size: 13px;
   color: var(--ink-on-cream-faint);
-  margin-bottom: var(--s-7);
+  margin: calc(-1 * var(--s-3)) 0 var(--s-5);
 }
-.kaart-section__label + .kaart-list,
-.kaart-section__label + .kaart-grid-3,
-.kaart-section__label + p + .kaart-list,
-.kaart-section__label + p + .kaart-grid-3 { margin-top: var(--s-6); }
 
-.kaart-list { display: flex; flex-direction: column; }
+/* ---------- Lists: vertical column flow, like a printed menu ---------- */
+.kaart-list {
+  columns: 2;
+  column-gap: var(--s-8);
+}
+.kaart-list .drink-row { break-inside: avoid; }
 .kaart-grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--s-7);
+  gap: var(--s-6) var(--s-7);
 }
+/* Lists nested inside the 3-column layout stay single-column. */
+.kaart-grid-3 .kaart-list { columns: 1; }
+
 .kaart-list__group-title {
   font-family: var(--font-label);
   font-weight: 700;
@@ -120,23 +190,41 @@
   color: var(--ink-on-cream);
   margin-bottom: var(--s-4);
 }
-.kaart-list__group-title--spaced { margin-top: var(--s-7); }
+.kaart-list__group-title--spaced { margin-top: var(--s-6); }
 
-/* Flatten the reused drink-row component for this page: no card chrome */
-.kaart-page .drink-row { padding-left: var(--s-4); margin-bottom: var(--s-5); }
-.kaart-page .drink-row::before { background: var(--gold-soft); opacity: 0.6; }
-.kaart-page .drink-row:hover::before { opacity: 1; }
-.kaart-page .t-item { color: var(--ink-on-cream); font-size: 19px; }
+/* ---------- Rows: name ···· price on one line ---------- */
+.kaart-page .drink-row {
+  padding-left: 0;
+  margin-bottom: var(--s-3);
+}
+.kaart-page .drink-row::before { content: none; }
+.kaart-page .drink-row__main {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.kaart-page .drink-row__main::after {
+  content: "";
+  order: 2;
+  flex: 1 1 auto;
+  min-width: 20px;
+  border-bottom: 1px dotted rgba(159,134,73,0.55);
+  transform: translateY(-3px);
+}
+.kaart-page .drink-row__main .t-item { order: 1; }
+.kaart-page .drink-row__main .t-price { order: 3; }
+.kaart-page .t-item { color: var(--ink-on-cream); font-size: 17.5px; line-height: 1.25; }
 .kaart-page .t-price {
   color: var(--gold-soft);
-  font-size: 17px;
+  font-size: 15.5px;
   font-weight: 600;
   white-space: nowrap;
 }
-.kaart-page .t-desc { color: #4A4636; font-size: 14.5px; margin-top: 2px; }
+.kaart-page .t-desc { color: #4A4636; font-size: 13.5px; margin-top: 1px; }
 
 .kaart-allergy-note {
-  margin-top: var(--s-7);
+  margin-top: var(--s-6);
   font-family: var(--font-italic);
   font-style: italic;
   color: var(--ink-on-cream-soft);
@@ -144,10 +232,15 @@
 }
 
 @media (max-width: 900px) {
-  .kaart-grid-3 { grid-template-columns: 1fr; gap: var(--s-6); }
+  .kaart-list { column-gap: var(--s-7); }
+  .kaart-grid-3 { grid-template-columns: 1fr; gap: var(--s-5); }
 }
 
 @media (max-width: 720px) {
-  .kaart-intro { padding-top: 128px; }
-  .kaart-section { padding: var(--s-7) var(--s-4); }
+  .kaart-intro { padding-top: var(--s-4); }
+  .kaart-intro__grid { padding-bottom: var(--s-6); }
+  .kaart-nav__inner { padding: 0 var(--s-4); gap: var(--s-4); }
+  .kaart-section { padding: var(--s-6) var(--s-4) var(--s-5); }
+  .kaart-list { columns: 1; }
+  .kaart-page .t-item { font-size: 17px; }
 }

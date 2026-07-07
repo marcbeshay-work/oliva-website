@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kaart — Oliva · Amersfoort</title>
+<title>Kaart · Oliva · Amersfoort</title>
 <meta name="description" content="De volledige kaart van Oliva: steenovenpizza's, huisgemaakte pasta, antipasti, cocktails en Italiaanse wijnen aan het Eemplein in Amersfoort.">
-<link rel="stylesheet" href="brand_assets/oliva/colors_and_type.css?v=1783095530">
-<link rel="stylesheet" href="brand_assets/oliva/textures.css?v=1783095530">
-<link rel="stylesheet" href="assets/css/site.css?v=1783095530">
-<link rel="stylesheet" href="assets/css/kaart.css?v=1783095530">
+<link rel="stylesheet" href="brand_assets/oliva/colors_and_type.css?v=1783181041">
+<link rel="stylesheet" href="brand_assets/oliva/textures.css?v=1783181041">
+<link rel="stylesheet" href="assets/css/site.css?v=1783181041">
+<link rel="stylesheet" href="assets/css/kaart.css?v=1783181041">
 </head>
 <body class="oliva oliva-page-cream kaart-page">
 
@@ -19,24 +19,24 @@
     <nav class="nav__links" aria-label="Hoofdmenu">
       <div class="nav__group">
         <a href="index.html#over-ons">Over ons</a>
-        <a href="index.html#gerechten">Gerechten</a>
+        <a href="index.html#menukaart">Menu</a>
+        <a href="index.html#galerij">Galerij</a>
         <a href="kaart.html" aria-current="page">Kaart</a>
         <a href="index.html#locatie">Locatie</a>
       </div>
       <div class="nav__group nav__group--right">
         <div class="nav__social">
-          <a href="https://instagram.com/oliva_italianrestaurant" target="_blank" rel="noopener" aria-label="Oliva op Instagram" class="nav__social-link">
+          <a href="https://www.instagram.com/oliva.amersfoort/" target="_blank" rel="noopener" aria-label="Oliva op Instagram" class="nav__social-link">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
           </a>
-          <!-- Placeholder: vervang door de echte Facebook-pagina van Oliva zodra bekend -->
-          <a href="#" aria-label="Oliva op Facebook" class="nav__social-link">
+          <a href="https://www.facebook.com/p/Restaurant-Oliva-cucina-italiana-bar-100063534971122/?locale=nl_NL" target="_blank" rel="noopener" aria-label="Oliva op Facebook" class="nav__social-link">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
         </div>
-        <a href="index.html#reserveren" class="btn btn--primary nav__cta">Reserveer</a>
+        <a href="index.html#reserveren" class="btn btn--primary nav__cta" data-open-reservation>Reserveer</a>
       </div>
     </nav>
-    <a class="nav__brand" href="index.html" aria-label="Oliva — home">
+    <a class="nav__brand" href="index.html" aria-label="Oliva home">
       <img src="brand_assets/oliva/logo/oliva-lockup-transparent-white.png" alt="Oliva" class="nav__logo nav__logo--light">
       <img src="brand_assets/oliva/logo/oliva-lockup-transparent-dark.png" alt="Oliva" class="nav__logo nav__logo--dark">
       <span class="nav__brand-sub">Italian Bar <em class="amp">&amp;</em> Restaurant</span>
@@ -47,6 +47,23 @@
   </div>
 </header>
 
+<nav class="kaart-nav" id="kaartNav" aria-label="Kaart categorieën">
+  <div class="kaart-nav__inner">
+    <a href="#borrelhapjes">Borrel</a>
+    <a href="#antipasti">Antipasti</a>
+    <a href="#pizza">Pizza</a>
+    <a href="#pasta">Pasta</a>
+    <a href="#dolci">Dolci</a>
+    <a href="#cocktails">Cocktails</a>
+    <a href="#gintonic">Gin &amp; Mocktails</a>
+    <a href="#wijnen">Wijnen</a>
+    <a href="#bier">Bier</a>
+    <a href="#frisdranken">Fris</a>
+    <a href="#digestieven">Digestieven</a>
+    <a href="#koffie">Koffie</a>
+  </div>
+</nav>
+
 <main id="main">
 
   <section class="kaart-intro">
@@ -55,7 +72,7 @@
         <p class="t-section">Onze kaart</p>
         <h1 class="kaart-intro__title">Kaart</h1>
         <div class="kaart-hairline"></div>
-        <p class="kaart-intro__body">Oliva is geopend voor lunch, borrel en diner. Aan het Eemplein komen steenovenpizza's, huisgemaakte pasta en een zorgvuldig samengestelde Italiaanse wijnkaart samen — bereid met verse ingrediënten en een menu dat meebeweegt met het seizoen.</p>
+        <p class="kaart-intro__body">Oliva is geopend voor lunch, borrel en diner. Aan het Eemplein komen steenovenpizza's, huisgemaakte pasta en een zorgvuldig samengestelde Italiaanse wijnkaart samen, bereid met verse ingrediënten en een menu dat meebeweegt met het seizoen.</p>
         <p class="kaart-intro__body">U schuift aan voor een snelle spritz aan de bar, een lange avond met vrienden, of een uitgebreid diner op het terras. Bij Oliva staat de eenvoud van eerlijke Italiaanse keuken centraal, geserveerd met oprechte gastvrijheid.</p>
         <p class="kaart-intro__signoff">Buon appetito.</p>
       </div>
@@ -65,7 +82,10 @@
 
   <section class="kaart-section" id="borrelhapjes">
     <div class="kaart-section__inner">
-      <p class="t-section kaart-section__label">Borrelhapjes</p>
+      <p class="kaart-section__eyebrow">Om te beginnen</p>
+      <h2 class="kaart-section__title">Borrelhapjes</h2>
+      <p class="kaart-section__tagline">Klein beginnen, samen delen</p>
+      <div class="kaart-section__hairline"></div>
       <div class="kaart-list">
         <div class="drink-row"><div class="drink-row__main"><span class="t-item">Bitterballen</span><span class="t-price">€ 7,75</span></div><p class="t-desc">Met mosterd</p></div>
         <div class="drink-row"><div class="drink-row__main"><span class="t-item">Nachos</span><span class="t-price">€ 9,50</span></div><p class="t-desc">Guacamole / aioli / kaas</p></div>
@@ -81,7 +101,10 @@
 
   <section class="kaart-section" id="antipasti">
     <div class="kaart-section__inner">
-      <p class="t-section kaart-section__label">Antipasti &amp; gedeeld</p>
+      <p class="kaart-section__eyebrow">Antipasti</p>
+      <h2 class="kaart-section__title">Antipasti &amp; Gedeeld</h2>
+      <p class="kaart-section__tagline">Voor een rijk begin, samen aan tafel</p>
+      <div class="kaart-section__hairline"></div>
       <div class="kaart-list">
         <div class="drink-row"><div class="drink-row__main"><span class="t-item">Focaccia</span><span class="t-price">€ 7,75</span></div><p class="t-desc">Olijven / kruidenboter / tapenade</p></div>
         <div class="drink-row"><div class="drink-row__main"><span class="t-item">Pane e burro</span><span class="t-price">€ 5,75</span></div><p class="t-desc">Huisgemaakt brood / aioli</p></div>
@@ -99,14 +122,17 @@
         <div class="drink-row"><div class="drink-row__main"><span class="t-item">Gamberi aglio e olio</span><span class="t-price">€ 10,90</span></div><p class="t-desc">Garnalen / knoflook / olijfolie</p></div>
         <div class="drink-row"><div class="drink-row__main"><span class="t-item">Gamberi croccanti</span><span class="t-price">€ 9,90</span></div><p class="t-desc">Krokant / chilimayonaise</p></div>
         <div class="drink-row"><div class="drink-row__main"><span class="t-item">Pollo picante</span><span class="t-price">€ 9,90</span></div><p class="t-desc">Kip / tomatensaus / pepers</p></div>
-        <div class="drink-row"><div class="drink-row__main"><span class="t-item">Antipasti alla Oliva</span><span class="t-price">€ 12,90 p.p.</span></div><p class="t-desc">Koude delicatessen / brood / aioli — vanaf 2 personen</p></div>
+        <div class="drink-row"><div class="drink-row__main"><span class="t-item">Antipasti alla Oliva</span><span class="t-price">€ 12,90 p.p.</span></div><p class="t-desc">Koude delicatessen / brood / aioli (vanaf 2 personen)</p></div>
       </div>
     </div>
   </section>
 
   <section class="kaart-section" id="pizza">
     <div class="kaart-section__inner">
-      <p class="t-section kaart-section__label">Steenoven pizza's</p>
+      <p class="kaart-section__eyebrow">Forno</p>
+      <h2 class="kaart-section__title">Steenoven Pizza's</h2>
+      <p class="kaart-section__tagline">Vers gebakken in de steenoven</p>
+      <div class="kaart-section__hairline"></div>
       <p class="kaart-section__note">Ook glutenvrij mogelijk, + € 2,00</p>
       <p class="kaart-list__group-title">Klassiek</p>
       <div class="kaart-list">
@@ -137,7 +163,10 @@
 
   <section class="kaart-section" id="pasta">
     <div class="kaart-section__inner">
-      <p class="t-section kaart-section__label">Pasta</p>
+      <p class="kaart-section__eyebrow">Fatta in casa</p>
+      <h2 class="kaart-section__title">Pasta</h2>
+      <p class="kaart-section__tagline">Huisgemaakt, zoals het hoort</p>
+      <div class="kaart-section__hairline"></div>
       <p class="kaart-section__note">Ook glutenvrij mogelijk, + € 2,00</p>
       <div class="kaart-list">
         <div class="drink-row"><div class="drink-row__main"><span class="t-item">Spaghetti Bolognese</span><span class="t-price">€ 18,95</span></div><p class="t-desc">Rundergehaktsaus / parmezaan</p></div>
@@ -156,9 +185,28 @@
     </div>
   </section>
 
+  <section class="kaart-section" id="dolci">
+    <div class="kaart-section__inner">
+      <p class="kaart-section__eyebrow">Zoet</p>
+      <h2 class="kaart-section__title">Dolci</h2>
+      <p class="kaart-section__tagline">Zoete afsluiting, huisgemaakt</p>
+      <div class="kaart-section__hairline"></div>
+      <div class="kaart-list">
+        <div class="drink-row"><div class="drink-row__main"><span class="t-item">Appeltaart</span><span class="t-price">€ 5,50</span></div><p class="t-desc">Klassiek / slagroom</p></div>
+        <div class="drink-row"><div class="drink-row__main"><span class="t-item">Cheesecake</span><span class="t-price">€ 7,50</span></div><p class="t-desc">Verse aardbeien / slagroom</p></div>
+        <div class="drink-row"><div class="drink-row__main"><span class="t-item">Tiramisu</span><span class="t-price">€ 7,90</span></div><p class="t-desc">Mascarpone / koffie / amaretto</p></div>
+        <div class="drink-row"><div class="drink-row__main"><span class="t-item">Limoncello taart</span><span class="t-price">€ 7,90</span></div><p class="t-desc">Mascarpone / citroen / slagroom</p></div>
+      </div>
+      <p class="kaart-allergy-note">Heeft u een allergie of speciaal dieet? Laat het ons weten, wij helpen u graag.</p>
+    </div>
+  </section>
+
   <section class="kaart-section" id="cocktails">
     <div class="kaart-section__inner">
-      <p class="t-section kaart-section__label">Cocktails &amp; aperitief</p>
+      <p class="kaart-section__eyebrow">Aperitivo</p>
+      <h2 class="kaart-section__title">Cocktails</h2>
+      <p class="kaart-section__tagline">Voor een levendige start van de avond</p>
+      <div class="kaart-section__hairline"></div>
       <p class="kaart-section__note">Aperol &amp; Limoncello Spritz, 2 voor € 17,50</p>
       <div class="kaart-list">
         <div class="drink-row"><div class="drink-row__main"><span class="t-item">Aperol Spritz</span><span class="t-price">€ 9,25</span></div><p class="t-desc">Aperol / prosecco / bruiswater</p></div>
@@ -177,7 +225,10 @@
 
   <section class="kaart-section" id="gintonic">
     <div class="kaart-section__inner">
-      <p class="t-section kaart-section__label">Gin &amp; tonic · mocktails · water</p>
+      <p class="kaart-section__eyebrow">Verfrissend</p>
+      <h2 class="kaart-section__title">Gin &amp; Mocktails</h2>
+      <p class="kaart-section__tagline">Licht en verfrissend, met of zonder alcohol</p>
+      <div class="kaart-section__hairline"></div>
       <div class="kaart-grid-3">
         <div>
           <p class="kaart-list__group-title">Gin &amp; tonic</p>
@@ -200,7 +251,7 @@
           <p class="kaart-list__group-title">Water</p>
           <div class="kaart-list">
             <div class="drink-row"><div class="drink-row__main"><span class="t-item">San Pellegrino 0,75L</span><span class="t-price">€ 7,50</span></div><p class="t-desc">Bruisend</p></div>
-            <div class="drink-row"><div class="drink-row__main"><span class="t-item">Acqua Panna 0,75L</span><span class="t-price">€ 7,50</span></div><p class="t-desc">Nog</p></div>
+            <div class="drink-row"><div class="drink-row__main"><span class="t-item">Acqua Panna 0,75L</span><span class="t-price">€ 7,50</span></div><p class="t-desc">Zonder koolzuur</p></div>
           </div>
         </div>
       </div>
@@ -209,7 +260,10 @@
 
   <section class="kaart-section" id="wijnen">
     <div class="kaart-section__inner">
-      <p class="t-section kaart-section__label">Wijnen</p>
+      <p class="kaart-section__eyebrow">Cantina</p>
+      <h2 class="kaart-section__title">Wijnen</h2>
+      <p class="kaart-section__tagline">Zorgvuldig geselecteerd uit Italië</p>
+      <div class="kaart-section__hairline"></div>
       <p class="kaart-section__note">Prijzen per glas · fles</p>
       <div class="kaart-grid-3">
         <div>
@@ -244,7 +298,10 @@
 
   <section class="kaart-section" id="bier">
     <div class="kaart-section__inner">
-      <p class="t-section kaart-section__label">Bier</p>
+      <p class="kaart-section__eyebrow">Van de tap</p>
+      <h2 class="kaart-section__title">Bier</h2>
+      <p class="kaart-section__tagline">Fris getapt of uit de fles</p>
+      <div class="kaart-section__hairline"></div>
       <div class="kaart-grid-3">
         <div class="kaart-list">
           <div class="drink-row"><div class="drink-row__main"><span class="t-item">Alfa (tap) 0,25L</span><span class="t-price">€ 3,75</span></div><p class="t-desc">Pilsener / Nederland</p></div>
@@ -273,7 +330,10 @@
 
   <section class="kaart-section" id="frisdranken">
     <div class="kaart-section__inner">
-      <p class="t-section kaart-section__label">Frisdranken</p>
+      <p class="kaart-section__eyebrow">Fris</p>
+      <h2 class="kaart-section__title">Frisdranken</h2>
+      <p class="kaart-section__tagline">Voor bij elk moment van de dag</p>
+      <div class="kaart-section__hairline"></div>
       <div class="kaart-grid-3">
         <div class="kaart-list">
           <div class="drink-row"><div class="drink-row__main"><span class="t-item">Cola / Cola zero</span><span class="t-price">€ 3,50</span></div></div>
@@ -298,7 +358,10 @@
 
   <section class="kaart-section" id="digestieven">
     <div class="kaart-section__inner">
-      <p class="t-section kaart-section__label">Digestieven &amp; likeuren</p>
+      <p class="kaart-section__eyebrow">Na het diner</p>
+      <h2 class="kaart-section__title">Likeuren &amp; Digestieven</h2>
+      <p class="kaart-section__tagline">Een mooi einde aan de avond</p>
+      <div class="kaart-section__hairline"></div>
       <div class="kaart-grid-3">
         <div>
           <p class="kaart-list__group-title">Likeuren</p>
@@ -353,7 +416,10 @@
 
   <section class="kaart-section" id="koffie">
     <div class="kaart-section__inner">
-      <p class="t-section kaart-section__label">Koffie &amp; thee</p>
+      <p class="kaart-section__eyebrow">Warme dranken</p>
+      <h2 class="kaart-section__title">Koffie &amp; Thee</h2>
+      <p class="kaart-section__tagline">Voor bij het dessert of als afsluiter</p>
+      <div class="kaart-section__hairline"></div>
       <div class="kaart-grid-3">
         <div class="kaart-list">
           <div class="drink-row"><div class="drink-row__main"><span class="t-item">Koffie</span><span class="t-price">€ 3,40</span></div></div>
@@ -382,18 +448,6 @@
     </div>
   </section>
 
-  <section class="kaart-section" id="dolci">
-    <div class="kaart-section__inner">
-      <p class="t-section kaart-section__label">Dolci</p>
-      <div class="kaart-list">
-        <div class="drink-row"><div class="drink-row__main"><span class="t-item">Appeltaart</span><span class="t-price">€ 5,50</span></div><p class="t-desc">Klassiek / slagroom</p></div>
-        <div class="drink-row"><div class="drink-row__main"><span class="t-item">Cheesecake</span><span class="t-price">€ 7,50</span></div><p class="t-desc">Verse aardbeien / slagroom</p></div>
-        <div class="drink-row"><div class="drink-row__main"><span class="t-item">Tiramisu</span><span class="t-price">€ 7,90</span></div><p class="t-desc">Mascarpone / koffie / amaretto</p></div>
-        <div class="drink-row"><div class="drink-row__main"><span class="t-item">Limoncello taart</span><span class="t-price">€ 7,90</span></div><p class="t-desc">Mascarpone / citroen / slagroom</p></div>
-      </div>
-      <p class="kaart-allergy-note">Heeft u een allergie of speciaal dieet? Laat het ons weten, wij helpen u graag.</p>
-    </div>
-  </section>
 
 </main>
 
@@ -401,14 +455,15 @@
   <div class="footer__grid">
     <div class="footer__col footer__col--brand">
       <img src="brand_assets/oliva/logo/oliva-lockup-transparent-white.png" alt="Oliva" class="footer__logo">
-      <p class="footer__tagline">Italian Bar &amp; Restaurant — Italiaanse gastvrijheid aan het Eemplein.</p>
+      <p class="footer__tagline">Italian Bar &amp; Restaurant · Italiaanse gastvrijheid aan het Eemplein.</p>
     </div>
     <div class="footer__col">
       <p class="footer__col-title">Navigatie</p>
       <nav class="footer__links" aria-label="Footer navigatie">
         <a href="index.html#over-ons">Over ons</a>
+        <a href="index.html#menukaart">Menu</a>
         <a href="kaart.html">Kaart</a>
-        <a href="index.html#sfeer">Sfeer &amp; foto's</a>
+        <a href="index.html#galerij">Galerij</a>
         <a href="index.html#catering">Catering &amp; verhuur</a>
         <a href="index.html#locatie">Locatie</a>
       </nav>
@@ -424,7 +479,7 @@
     <div class="footer__col">
       <p class="footer__col-title">Volg ons</p>
       <div class="footer__links">
-        <a class="footer__ig" href="https://instagram.com/oliva_italianrestaurant" target="_blank" rel="noopener">@oliva_italianrestaurant</a>
+        <a class="footer__ig" href="https://www.instagram.com/oliva.amersfoort/" target="_blank" rel="noopener">@oliva.amersfoort</a>
       </div>
     </div>
   </div>
@@ -434,6 +489,13 @@
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=1783095530"></script>
+<script>
+// Must run before the eet.nu script below: the widget reads this cookie at
+// init to decide whether to start collapsed. No Secure flag, so it also
+// works on http://localhost.
+document.cookie = 'reservationWidgetStatus=collapsed; path=/; SameSite=Lax';
+</script>
+<script id="eetnuReservationWidget" type="text/javascript" src="https://reserveringen.eet.nu/hungry/restaurants/76135/reservations/new.js?layout=floating&locale=nl&variant=realtime/dark&position=bottom-right"></script>
+<script src="assets/js/site.js?v=1783181041"></script>
 </body>
 </html>

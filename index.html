@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oliva — Italian Bar & Restaurant · Amersfoort</title>
-<meta name="description" content="Oliva Amersfoort — Italian Bar & Restaurant aan Eemplein 16c. Steenovenpizza's, huisgemaakte pasta, cocktails en een Italiaanse wijnkaart.">
-<link rel="stylesheet" href="brand_assets/oliva/colors_and_type.css?v=1783095530">
-<link rel="stylesheet" href="brand_assets/oliva/textures.css?v=1783095530">
-<link rel="stylesheet" href="assets/css/site.css?v=1783095530">
+<title>Oliva · Italian Bar & Restaurant · Amersfoort</title>
+<meta name="description" content="Oliva Amersfoort, Italian Bar & Restaurant aan Eemplein 16c. Steenovenpizza's, huisgemaakte pasta, cocktails en een Italiaanse wijnkaart.">
+<link rel="stylesheet" href="brand_assets/oliva/colors_and_type.css?v=1783250951">
+<link rel="stylesheet" href="brand_assets/oliva/textures.css?v=1783250951">
+<link rel="stylesheet" href="assets/css/site.css?v=1783250951">
 </head>
 <body class="oliva oliva-page-cream">
 
@@ -18,25 +18,24 @@
     <nav class="nav__links" aria-label="Hoofdmenu">
       <div class="nav__group">
         <a href="#over-ons">Over ons</a>
-        <a href="#gerechten">Gerechten</a>
-        <a href="#sfeer">Sfeer</a>
+        <a href="#menukaart">Menu</a>
+        <a href="#galerij">Galerij</a>
         <a href="kaart.html">Kaart</a>
         <a href="#locatie">Locatie</a>
       </div>
       <div class="nav__group nav__group--right">
         <div class="nav__social">
-          <a href="https://instagram.com/oliva_italianrestaurant" target="_blank" rel="noopener" aria-label="Oliva op Instagram" class="nav__social-link">
+          <a href="https://www.instagram.com/oliva.amersfoort/" target="_blank" rel="noopener" aria-label="Oliva op Instagram" class="nav__social-link">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
           </a>
-          <!-- Placeholder: vervang door de echte Facebook-pagina van Oliva zodra bekend -->
-          <a href="#" aria-label="Oliva op Facebook" class="nav__social-link">
+          <a href="https://www.facebook.com/p/Restaurant-Oliva-cucina-italiana-bar-100063534971122/?locale=nl_NL" target="_blank" rel="noopener" aria-label="Oliva op Facebook" class="nav__social-link">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
         </div>
-        <a href="#reserveren" class="btn btn--primary nav__cta">Reserveer</a>
+        <a href="#reserveren" class="btn btn--primary nav__cta" data-open-reservation>Reserveer</a>
       </div>
     </nav>
-    <a class="nav__brand" href="#top" aria-label="Oliva — home">
+    <a class="nav__brand" href="#top" aria-label="Oliva home">
       <img src="brand_assets/oliva/logo/oliva-lockup-transparent-white.png" alt="Oliva" class="nav__logo nav__logo--light">
       <img src="brand_assets/oliva/logo/oliva-lockup-transparent-dark.png" alt="Oliva" class="nav__logo nav__logo--dark">
       <span class="nav__brand-sub">Italian Bar <em class="amp">&amp;</em> Restaurant</span>
@@ -49,112 +48,93 @@
 
 <main id="main">
 
-  <section class="hero" id="top">
+  <section class="hero hero--centered" id="top">
     <div class="hero__image" data-parallax="16" aria-hidden="true"></div>
-    <div class="hero__content">
-      <p class="t-section hero__eyebrow">Amersfoort · Eemplein</p>
-      <h1 class="hero__title">Oliva</h1>
-      <p class="t-page-sub hero__subtitle">Restaurant · Bar · Terras</p>
-      <p class="hero__lead">Steenovenpizza's, huisgemaakte pasta en Italiaanse wijnen — samen aan tafel op het Eemplein.</p>
-      <div class="hero__actions">
-        <a href="#reserveren" class="btn btn--primary">Reserveer direct</a>
-        <a href="kaart.html" class="btn btn--ghost">Bekijk de kaart</a>
+    <div class="hero__content hero__content--centered">
+      <div class="hero__brand-float" id="heroBrandFloat">
+        <div class="hero__logo-wrap">
+          <img src="brand_assets/oliva/logo/oliva-badge-wit-transparant.png" alt="Oliva · Italian Restaurant · Bar · Amersfoort" class="hero__logo hero__logo--full" id="heroLogoFull">
+          <img src="brand_assets/oliva/logo/oliva-mark-wit-transparant.png" alt="" aria-hidden="true" class="hero__logo-mark" id="heroLogoMark">
+        </div>
+        <a href="#reserveren" class="btn btn--ghost hero__reserve-cta">Reserveer nu</a>
       </div>
-      <div class="hero__quicklinks">
-        <span class="hero__quicklinks-label">Populair</span>
-        <a href="kaart.html#pizza">Pizza</a>
-        <a href="kaart.html#pasta">Pasta</a>
-        <a href="kaart.html#cocktails">Cocktails</a>
-        <a href="kaart.html#wijnen">Wijn</a>
-      </div>
+      <a href="#over-ons" class="hero__scroll-cue" aria-label="Scroll naar beneden">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 4v15M5 12l7 7 7-7"/></svg>
+      </a>
     </div>
   </section>
-
 
   <section class="section section--light" id="over-ons">
     <div class="section__inner section__inner--split">
-      <div class="over-ons-photo section__media" style="background-image:url('brand_assets/oliva/photos/bar.jpg')" role="img" aria-label="Twee gasten proosten met wijn bij Oliva"></div>
-      <div class="over-ons-text">
-        <div class="section__text">
-          <p class="t-section">Welkom</p>
-          <h2 class="section-title">Italian dining met een warme hand</h2>
-          <p class="section-body">Steenovenpizza's, huisgemaakte pasta en een Italiaanse wijnkaart — bij Oliva schuift u aan voor een avond vol delen, proeven en gezelligheid.</p>
-        </div>
-        <div class="section__text">
-          <p class="t-section">Onze aanpak</p>
-          <h3 class="section-subtitle">Oprechte eenvoud met verfijning</h3>
-          <p class="section-body">Geen show, wel smaak: verse ingrediënten, gastvrije bediening en een sfeer waarin u zich thuis voelt — op het terras of aan de bar.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <p class="pull-quote">Alsof u even in Italië bent — <em>midden op het Eemplein.</em></p>
-
-  <section class="section section--light" id="buiten">
-    <div class="section__inner section__inner--split">
       <div class="section__text">
-        <p class="t-section">Buiten</p>
-        <h2 class="section-title">Terras en gevel</h2>
-        <p class="section-body">Aan het Eemplein, met een terras waar u ook op een zonnige middag zo aanschuift.</p>
+        <p class="t-section">Over ons</p>
+        <h2 class="section-title">Oliva aan het Eemplein</h2>
+        <p class="section-body">Oliva ligt aan het Eemplein, een van de sfeervolste plekken van Amersfoort. Vanaf de eerste dag draait het bij ons om oprechte Italiaanse gastvrijheid: een plek waar u binnenloopt voor een espresso en blijft hangen voor het diner.</p>
+        <p class="section-body">Onze keuken bereidt gerechten volgens vertrouwde Italiaanse tradities: steenovenpizza's, huisgemaakte pasta en verse antipasti, samengesteld met de seizoenen en geserveerd met evenveel aandacht als op de eerste dag.</p>
+        <a href="#reserveren" class="btn btn--ghost">Reserveer uw tafel</a>
       </div>
-      <div class="image-panel image-panel--facade section__media" data-parallax="10" style="background-image:url('brand_assets/oliva/photos/gevel-buitenkant.jpg')" aria-hidden="true"></div>
-    </div>
-  </section>
-
-  <section class="section section--dark" id="gerechten">
-    <div class="section__inner">
-      <p class="t-section t-section--cream">Onze kaart</p>
-      <h2 class="section-title section-title--cream">Wat er op tafel komt</h2>
-      <p class="section-body section-body--cream">Steenovenpizza's, huisgemaakte pasta en gedeelde antipasti — bereid met verse ingrediënten, van lunch tot laat diner.</p>
-      <div class="dish-grid">
-        <article class="dish-card">
-          <div class="dish-card__photo" style="background-image:url('brand_assets/oliva/photos/pizza.jpg')" role="img" aria-label="Pizza Margherita bij Oliva"></div>
-          <div class="dish-card__body">
-            <div class="dish-card__main">
-              <span class="t-item">Pizza Margherita</span>
-              <span class="t-price">€ 12,50</span>
-            </div>
-            <p class="t-desc">Tomatensaus / mozzarella</p>
-          </div>
-        </article>
-        <article class="dish-card">
-          <div class="dish-card__photo" style="background-image:url('brand_assets/oliva/photos/gerecht-02.jpg')" role="img" aria-label="Spaghetti Burrata bij Oliva"></div>
-          <div class="dish-card__body">
-            <div class="dish-card__main">
-              <span class="t-item">Spaghetti Burrata</span>
-              <span class="t-price">€ 19,95</span>
-            </div>
-            <p class="t-desc">Burrata / verse pesto / cherrytomaatjes</p>
-          </div>
-        </article>
-        <article class="dish-card">
-          <div class="dish-card__photo" style="background-image:url('brand_assets/oliva/photos/gerecht-01.jpg')" role="img" aria-label="Antipasti alla Oliva"></div>
-          <div class="dish-card__body">
-            <div class="dish-card__main">
-              <span class="t-item">Antipasti alla Oliva</span>
-              <span class="t-price">€ 12,90 p.p.</span>
-            </div>
-            <p class="t-desc">Italiaanse delicatessen om te delen</p>
-          </div>
-        </article>
-      </div>
-      <div class="gerechten-cta">
-        <a href="kaart.html" class="btn btn--primary">Bekijk de volledige kaart</a>
-        <a href="kaart.html#cocktails" class="gerechten-cta__link">Liever eerst een cocktail? Bekijk de kaart →</a>
+      <div class="intro-collage section__media">
+        <div class="intro-collage__main" style="background-image:url('brand_assets/oliva/photos/bar.jpg')" role="img" aria-label="Twee gasten proosten met wijn bij Oliva"></div>
+        <div class="intro-collage__accent" style="background-image:url('brand_assets/oliva/photos/gevel-buitenkant.jpg')" role="img" aria-label="De gevel van Oliva aan het Eemplein"></div>
+        <div class="intro-collage__row">
+          <div class="intro-collage__small" style="background-image:url('brand_assets/oliva/photos/oliva-03.jpg')" role="img" aria-label="Gast geniet van een gerecht bij Oliva"></div>
+          <div class="intro-collage__small" style="background-image:url('brand_assets/oliva/photos/gerecht-01.jpg')" role="img" aria-label="Antipasti alla Oliva"></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--light" id="sfeer">
-    <div class="section__inner">
+  <section class="quote-band">
+    <div class="quote-band__bg" data-parallax="25" style="background-image:url('brand_assets/oliva/photos/oliva-01-banner.jpg?v=1783250951')" aria-hidden="true"></div>
+    <div class="quote-band__scrim" aria-hidden="true"></div>
+    <p class="quote-band__text">Alsof u even in Italië bent, <em>midden op het Eemplein.</em></p>
+  </section>
+
+  <section class="section section--light section--bleed-bottom" id="menukaart">
+    <div class="section__inner section__inner--center">
+      <p class="t-section">Onze kaart</p>
+      <h2 class="section-title section-title--center">Onze Menukaart</h2>
+      <p class="section-lede">Met liefde gemaakt</p>
+      <div class="menukaart-cols">
+        <div class="menukaart-col">
+          <div class="menukaart-col__photo" style="background-image:url('brand_assets/oliva/photos/pizza.jpg')" role="img" aria-label="Pizza Margherita bij Oliva"></div>
+          <div class="menukaart-col__main"><span class="menukaart-col__title">Pizza Margherita</span><span class="menukaart-col__price">€ 12,50</span></div>
+          <p class="menukaart-col__body">Tomatensaus / mozzarella</p>
+        </div>
+        <div class="menukaart-col">
+          <div class="menukaart-col__photo" style="background-image:url('brand_assets/oliva/photos/gerecht-02.jpg')" role="img" aria-label="Spaghetti Burrata bij Oliva"></div>
+          <div class="menukaart-col__main"><span class="menukaart-col__title">Spaghetti Burrata</span><span class="menukaart-col__price">€ 19,95</span></div>
+          <p class="menukaart-col__body">Burrata / verse pesto / cherrytomaatjes</p>
+        </div>
+        <div class="menukaart-col">
+          <div class="menukaart-col__photo" style="background-image:url('brand_assets/oliva/photos/gerecht-01.jpg')" role="img" aria-label="Antipasti alla Oliva"></div>
+          <div class="menukaart-col__main"><span class="menukaart-col__title">Antipasti alla Oliva</span><span class="menukaart-col__price">€ 12,90 p.p.</span></div>
+          <p class="menukaart-col__body">Italiaanse delicatessen om te delen</p>
+        </div>
+      </div>
+      <a href="kaart.html" class="menukaart-cta">
+        <span>Bekijk onze volledige kaart</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="menukaart-photo" data-parallax="40" style="background-image:url('brand_assets/oliva/photos/sfeer-03-banner.jpg?v=1783265980')" role="img" aria-label="Tomatensoep met knoflookbrood bij Oliva"></div>
+  </section>
+
+  <section class="section section--light" id="galerij">
+    <div class="section__inner section__inner--center">
       <p class="t-section">Sfeer</p>
-      <h2 class="section-title">Een avond bij Oliva</h2>
-      <p class="section-body">Een greep uit de sfeer aan het Eemplein — van gedeelde borden tot een glas wijn op het terras.</p>
-      <div class="gallery gallery--spread">
-        <div class="gallery__item gallery__item--s1" style="background-image:url('brand_assets/oliva/photos/oliva-01.jpg'); background-position: 62% center;" role="img" aria-label="De met de hand getekende muur bij de bar van Oliva"></div>
-        <div class="gallery__item gallery__item--s2" style="background-image:url('brand_assets/oliva/photos/sfeer-01.jpg')" role="img" aria-label="De wijnwand in het interieur van Oliva"></div>
-        <div class="gallery__item gallery__item--s3" style="background-image:url('brand_assets/oliva/photos/sfeer-03.jpg')" role="img" aria-label="Tomatensoep met knoflookbrood bij Oliva"></div>
+      <h2 class="section-title section-title--center">Onze Fotogalerij</h2>
+      <p class="section-lede">Eten &amp; sfeer in beeld</p>
+      <p class="section-body" style="margin-left:auto;margin-right:auto;">Een greep uit de sfeer bij Oliva: van gedeelde gerechten tot een rustige avond aan het Eemplein.</p>
+    </div>
+    <div class="section__inner">
+      <div class="gallery--even">
+        <div style="background-image:url('brand_assets/oliva/photos/oliva-02.jpg')" role="img" aria-label="Aan tafel bij Oliva met een glas wijn"></div>
+        <div style="background-image:url('brand_assets/oliva/photos/sfeer-03.jpg?v=1783265980')" role="img" aria-label="Tomatensoep met knoflookbrood bij Oliva"></div>
+        <div style="background-image:url('brand_assets/oliva/photos/oliva-04.jpg')" role="img" aria-label="Bruschetta en krokante gamba's bij Oliva"></div>
+        <div style="background-image:url('brand_assets/oliva/photos/sfeer-01.jpg?v=1783266600')" role="img" aria-label="Borrelplank met brood, dips en bites bij Oliva"></div>
+        <div style="background-image:url('brand_assets/oliva/photos/bar.jpg')" role="img" aria-label="Toost aan de bar bij Oliva"></div>
+        <div style="background-image:url('brand_assets/oliva/photos/gevel-buitenkant.jpg')" role="img" aria-label="De gevel van Oliva aan het Eemplein"></div>
       </div>
     </div>
   </section>
@@ -186,19 +166,19 @@
         <div class="testimonial-grid" data-page="1" hidden>
           <div class="testimonial-card">
             <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
-            <p class="testimonial-quote">Zes pizza's besteld voor de hele tafel en niet één teleurstelling — de Diavola was favoriet.</p>
+            <p class="testimonial-quote">Zes pizza's besteld voor de hele tafel en niet één teleurstelling: de Diavola was favoriet.</p>
             <p class="testimonial-name">Mark H.</p>
             <p class="testimonial-meta">Google review · Amersfoort</p>
           </div>
           <div class="testimonial-card">
             <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
-            <p class="testimonial-quote">Een Aperol Spritz op het terras aan de Eem — beter wordt een vrijdagmiddag niet.</p>
+            <p class="testimonial-quote">Een Aperol Spritz op het terras aan de Eem: beter wordt een vrijdagmiddag niet.</p>
             <p class="testimonial-name">Lisa &amp; Daan</p>
             <p class="testimonial-meta">Google review · Weekendje Amersfoort</p>
           </div>
           <div class="testimonial-card">
             <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
-            <p class="testimonial-quote">Voor ons bedrijfsuitje regelden ze een borrelplank voor twintig man — soepel geregeld en heerlijk eten.</p>
+            <p class="testimonial-quote">Voor ons bedrijfsuitje regelden ze een borrelplank voor twintig man, soepel geregeld en heerlijk eten.</p>
             <p class="testimonial-name">Team Van Dijk</p>
             <p class="testimonial-meta">Google review · Bedrijfsborrel</p>
           </div>
@@ -214,42 +194,39 @@
   <section class="section section--light" id="catering">
     <div class="section__inner section__inner--split">
       <div class="catering-collage catering-collage--duo">
-        <div class="catering-collage__item catering-collage__item--top" style="background-image:url('brand_assets/oliva/photos/sfeer-01.jpg')" role="img" aria-label="De wijnwand in het interieur van Oliva"></div>
-        <div class="catering-collage__item" style="background-image:url('brand_assets/oliva/photos/oliva-04.jpg')" role="img" aria-label="Bruschetta en krokante gamba's bij Oliva"></div>
+        <div class="catering-collage__item catering-collage__item--top" style="background-image:url('brand_assets/oliva/photos/sfeer-02.jpg')" role="img" aria-label="Bruschetta bij Oliva"></div>
+        <div class="catering-collage__item" style="background-image:url('brand_assets/oliva/photos/gerecht-01.jpg')" role="img" aria-label="Antipasti alla Oliva"></div>
       </div>
       <div class="section__text">
         <p class="t-section">Catering &amp; verhuur</p>
         <h2 class="section-title">Oliva voor uw bedrijf of gezelschap</h2>
-        <p class="section-body">Bestelt u liever zelf in grote hoeveelheden? Voor bedrijven, vergaderingen en gezelschappen stellen wij graag een uitgebreide borrelplank of een compleet menu samen, bereid met dezelfde steenovenpizza's, antipasti en Italiaanse gerechten die u van ons kent — u haalt af wanneer het u uitkomt.</p>
-        <p class="section-body">Wilt u Oliva helemaal voor uzelf? Wij verhuren onze zaak ook voor besloten feesten, bedrijfsevenementen en bijzondere gelegenheden — inclusief bediening en een kaart op maat.</p>
+        <p class="section-body">Bestelt u liever zelf in grote hoeveelheden? Voor bedrijven, vergaderingen en gezelschappen stellen wij graag een uitgebreide borrelplank of een compleet menu samen, bereid met dezelfde steenovenpizza's, antipasti en Italiaanse gerechten die u van ons kent. U haalt af wanneer het u uitkomt.</p>
+        <p class="section-body">Wilt u Oliva helemaal voor uzelf? Wij verhuren onze zaak ook voor besloten feesten, bedrijfsevenementen en bijzondere gelegenheden, inclusief bediening en een kaart op maat.</p>
         <div class="catering-cta">
           <a href="mailto:reserveren@oliva-amersfoort.nl?subject=Cateringaanvraag" class="btn btn--primary">Offerte aanvragen</a>
-          <span class="catering-cta__note">Wij denken graag met u mee — reageren doorgaans binnen één werkdag.</span>
+          <span class="catering-cta__note">Wij denken graag met u mee.</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--dark section--reserve" id="reserveren">
-    <div class="section__inner section__inner--split">
-      <div class="section__media">
-        <div class="reserve-photo" data-parallax="10" style="background-image:url('brand_assets/oliva/photos/oliva-02.jpg')" role="img" aria-label="Aan tafel bij Oliva, met een glas rode wijn"></div>
-      </div>
-      <div class="section__text">
-        <p class="t-section t-section--cream">Aan tafel</p>
-        <h2 class="section-title section-title--cream">Reserveer een tafel</h2>
-        <p class="section-body section-body--cream">Voor lunch, diner of een gezellige borrel — wij zetten graag een tafel voor u klaar. Ook voor groepsreserveringen en speciale verzoeken staan we persoonlijk voor u klaar.</p>
-        <div class="reserve-contact">
-          <a href="tel:+31331234567" class="reserve-contact__row">
-            <svg class="reserve-contact__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6.5 3h3l1.5 4.5-2 1.5a13 13 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2C11.5 19.5 4.5 12.5 4.5 5a2 2 0 0 1 2-2z"/></svg>
-            <span>+31 33 123 4567</span>
-          </a>
-          <a href="mailto:reserveren@oliva-amersfoort.nl" class="reserve-contact__row">
-            <svg class="reserve-contact__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
-            <span>reserveren@oliva-amersfoort.nl</span>
-          </a>
-        </div>
-        <a href="tel:+31331234567" class="btn btn--primary reserve-cta">Bel voor een tafel</a>
+  <section class="reserve-band" id="reserveren">
+    <div class="reserve-band__bg" data-parallax="10" style="background-image:url('brand_assets/oliva/photos/gerecht-02.jpg')" aria-hidden="true"></div>
+    <div class="reserve-band__scrim" aria-hidden="true"></div>
+    <div class="reserve-band__content">
+      <p class="t-section t-section--cream">Aan tafel</p>
+      <h2 class="section-title section-title--cream">Reserveer een tafel</h2>
+      <p class="section-body section-body--cream">Voor lunch, diner of een gezellige borrel zetten wij graag een tafel voor u klaar. Ook voor groepsreserveringen en speciale verzoeken staan we persoonlijk voor u klaar.</p>
+      <a href="#reserveren" class="btn btn--primary reserve-band__cta" data-open-reservation>Reserveer online</a>
+      <div class="reserve-contact">
+        <a href="tel:+31331234567" class="reserve-contact__row">
+          <svg class="reserve-contact__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6.5 3h3l1.5 4.5-2 1.5a13 13 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2C11.5 19.5 4.5 12.5 4.5 5a2 2 0 0 1 2-2z"/></svg>
+          <span>+31 33 123 4567</span>
+        </a>
+        <a href="mailto:reserveren@oliva-amersfoort.nl" class="reserve-contact__row">
+          <svg class="reserve-contact__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+          <span>reserveren@oliva-amersfoort.nl</span>
+        </a>
       </div>
     </div>
   </section>
@@ -262,8 +239,13 @@
         <p class="section-body">Oliva<br>Eemplein 16c<br>3812 EA Amersfoort</p>
         <table class="hours">
           <tbody>
-            <tr><td>Dinsdag</td><td>15:00 — 22:00</td></tr>
-            <tr><td>Woensdag — Zondag</td><td>12:00 — 22:00</td></tr>
+            <tr><td>Maandag</td><td>15:00 tot 22:00</td></tr>
+            <tr><td>Dinsdag</td><td>15:00 tot 22:00</td></tr>
+            <tr><td>Woensdag</td><td>12:00 tot 22:00</td></tr>
+            <tr><td>Donderdag</td><td>12:00 tot 22:00</td></tr>
+            <tr><td>Vrijdag</td><td>12:00 tot 22:00</td></tr>
+            <tr><td>Zaterdag</td><td>12:00 tot 22:00</td></tr>
+            <tr><td>Zondag</td><td>12:00 tot 22:00</td></tr>
           </tbody>
         </table>
         <div class="location-actions">
@@ -271,16 +253,22 @@
         </div>
       </div>
       <div class="section__media">
-        <a href="https://maps.google.com/?q=Eemplein+16c,+3812+EA+Amersfoort" target="_blank" rel="noopener" class="map-frame" aria-label="Open Oliva in Google Maps">
+        <a href="https://www.google.com/maps/place/Restaurant+Oliva-+cucina+italiana-bar/data=!4m7!3m6!1s0x47c646a3e7cf465f:0xc8edf069e23d9499!8m2!3d52.1595496!4d5.382204!16s%2Fg%2F11g02hp5x0!19sChIJX0bP56NGxkcRmZQ94mnw7cg?authuser=0&hl=nl&rclk=1" target="_blank" rel="noopener" class="map-frame" aria-label="Open Oliva in Google Maps">
           <div class="map-frame__photo" data-parallax="8" style="background-image:url('brand_assets/oliva/photos/terras-buiten.jpg')" role="img" aria-label="Het terras van Oliva aan het Eemplein"></div>
           <span class="map-frame__pin">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
           </span>
-          <span class="map-frame__caption">Eemplein 16c · Amersfoort — bekijk op Google Maps</span>
+          <span class="map-frame__caption">Eemplein 16c · Amersfoort · Bekijk op Google Maps</span>
         </a>
       </div>
     </div>
   </section>
+
+  <nav class="quick-links" aria-label="Snelle links">
+    <a href="#reserveren">Reserveren</a>
+    <a href="kaart.html">Kaart</a>
+    <a href="#locatie">Contact</a>
+  </nav>
 
 </main>
 
@@ -288,14 +276,15 @@
   <div class="footer__grid">
     <div class="footer__col footer__col--brand">
       <img src="brand_assets/oliva/logo/oliva-lockup-transparent-white.png" alt="Oliva" class="footer__logo">
-      <p class="footer__tagline">Italian Bar &amp; Restaurant — Italiaanse gastvrijheid aan het Eemplein.</p>
+      <p class="footer__tagline">Italian Bar &amp; Restaurant · Italiaanse gastvrijheid aan het Eemplein.</p>
     </div>
     <div class="footer__col">
       <p class="footer__col-title">Navigatie</p>
       <nav class="footer__links" aria-label="Footer navigatie">
         <a href="#over-ons">Over ons</a>
+        <a href="#menukaart">Menu</a>
         <a href="kaart.html">Kaart</a>
-        <a href="#sfeer">Sfeer &amp; foto's</a>
+        <a href="#galerij">Galerij</a>
         <a href="#catering">Catering &amp; verhuur</a>
         <a href="#locatie">Locatie</a>
       </nav>
@@ -311,9 +300,9 @@
     <div class="footer__col">
       <p class="footer__col-title">Volg ons</p>
       <div class="footer__links">
-        <a class="footer__ig" href="https://instagram.com/oliva_italianrestaurant" target="_blank" rel="noopener">
+        <a class="footer__ig" href="https://www.instagram.com/oliva.amersfoort/" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-          @oliva_italianrestaurant
+          @oliva.amersfoort
         </a>
       </div>
     </div>
@@ -324,6 +313,13 @@
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=1783095530"></script>
+<script>
+// Must run before the eet.nu script below: the widget reads this cookie at
+// init to decide whether to start collapsed. No Secure flag, so it also
+// works on http://localhost.
+document.cookie = 'reservationWidgetStatus=collapsed; path=/; SameSite=Lax';
+</script>
+<script id="eetnuReservationWidget" type="text/javascript" src="https://reserveringen.eet.nu/hungry/restaurants/76135/reservations/new.js?layout=floating&locale=nl&variant=realtime/dark&position=bottom-right"></script>
+<script src="assets/js/site.js?v=1783250951"></script>
 </body>
 </html>
