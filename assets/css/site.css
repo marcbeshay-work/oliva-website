@@ -691,6 +691,105 @@ img, .photo-frame { max-width: 100%; }
 .reserve-band .reserve-contact__row { justify-content: center; }
 .reserve-band__cta { margin-top: var(--s-3); }
 
+/* ---------- Film & Diner — Pathé-samenwerking, full-bleed band ---------- */
+.film-band {
+  position: relative;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.film-band__bg {
+  position: absolute;
+  inset: -6% 0;
+  background-size: cover;
+  background-position: center 38%;
+}
+.film-band__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10,12,8,0.94) 0%, rgba(10,12,8,0.9) 40%, rgba(10,12,8,0.72) 62%, rgba(10,12,8,0.32) 100%);
+}
+.film-band__content {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--s-8) var(--s-5);
+}
+.film-band__content > * { max-width: 58ch; }
+.film-band .t-section,
+.film-band .section-title { text-shadow: 0 2px 16px rgba(0,0,0,0.55); }
+.film-band .section-body {
+  color: var(--ink-on-dark);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.85), 0 6px 20px rgba(0,0,0,0.6);
+}
+.film-band .section-title { margin-bottom: var(--s-4); }
+
+/* ---------- Offer callout: price + facts, visible at a glance ---------- */
+.film-band__offer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s-4);
+  margin: var(--s-3) 0 var(--s-5);
+  padding-bottom: var(--s-4);
+  border-bottom: 1px solid rgba(184,156,90,0.4);
+}
+.film-band__price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(32px, 4vw, 42px);
+  line-height: 1;
+  color: var(--gold-bright);
+  text-shadow: 0 2px 14px rgba(0,0,0,0.65);
+  white-space: nowrap;
+}
+.film-band__price span {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--ink-on-dark);
+  margin-left: 3px;
+}
+.film-band__tags {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.film-band__tag {
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-on-dark);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+.film-band__note {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-on-dark-soft);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  margin-top: var(--s-3);
+}
+.film-band__cta {
+  display: flex;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+  margin-top: var(--s-5);
+}
+@media (max-width: 720px) {
+  .film-band { min-height: 0; }
+  .film-band__scrim { background: linear-gradient(180deg, rgba(13,16,10,0.84) 0%, rgba(13,16,10,0.66) 100%); }
+  .film-band__content { padding: var(--s-7) var(--s-4); }
+  .film-band__offer { flex-direction: column; align-items: flex-start; gap: var(--s-3); }
+}
+
 /* ---------- Quick links bar (Reserveren · Kaart · Contact) ---------- */
 .quick-links {
   display: flex;
@@ -1046,6 +1145,9 @@ img, .photo-frame { max-width: 100%; }
 
 /* ---------- Sections ---------- */
 .section { padding: var(--s-9) var(--s-5); position: relative; }
+/* Follows a full-bleed photo directly (no band in between) — the standard
+   top padding reads as a dead gap since there's no content to land the eye on. */
+.section--bleed-top { padding-top: var(--s-6); }
 .section__inner { max-width: 1200px; margin: 0 auto; }
 .section__inner--center { text-align: center; }
 .section__inner--split {
