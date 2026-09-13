@@ -644,7 +644,11 @@ img, .photo-frame { max-width: 100%; }
 }
 .gallery--even > div:hover { transform: scale(1.015); }
 @media (max-width: 720px) {
-  .gallery--even { grid-template-columns: repeat(2, 1fr); }
+  /* Drie kolommen aanhouden zoals op desktop: met negen foto's blijft het
+     3/3/3 en hangt er geen losse tegel onderaan. Krappere gutter en gap
+     zodat de tegels op telefoonbreedte zo groot mogelijk blijven. */
+  .gallery--even { gap: var(--s-2); }
+  .section__inner--gallery { margin-inline: calc(var(--s-5) * -0.5); }
 }
 
 /* ---------- Reserveren — full-bleed CTA ---------- */
