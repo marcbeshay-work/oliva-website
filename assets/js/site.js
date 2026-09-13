@@ -128,7 +128,7 @@ if (parallaxEls.length && !prefersReducedMotion) {
   updateParallax();
 }
 
-const revealTargets = document.querySelectorAll('.section__text, .section__media, .gallery__item, .menu-col, .hero__content, .intro-collage, .quote-band__text, .gallery--even > div, .menukaart-photo, .catering-collage, .testimonial-card, .quick-links, .kaart-section__eyebrow, .kaart-intro__photo, .kaart-list, .menukaart-col');
+const revealTargets = document.querySelectorAll('.werken__media, .werken__content, .section__text, .section__media, .gallery__item, .menu-col, .hero__content, .intro-collage, .quote-band__text, .gallery--even > div, .menukaart-photo, .catering-collage, .testimonial-card, .quick-links, .kaart-section__eyebrow, .kaart-intro__photo, .kaart-list, .menukaart-col');
 revealTargets.forEach(el => el.classList.add('reveal'));
 
 const observer = new IntersectionObserver((entries) => {

@@ -791,6 +791,81 @@ img, .photo-frame { max-width: 100%; }
 }
 
 /* ---------- Quick links bar (Reserveren · Kaart · Contact) ---------- */
+/* ---------- Werken bij Oliva — ingetogen wervingsstrook ---------- */
+.werken {
+  background: var(--cream-warm);
+  border-bottom: 1px solid rgba(184,156,90,0.18);
+}
+.werken__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--s-8) var(--s-6);
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--s-9);
+  align-items: center;
+}
+.werken__photo {
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 14px 36px rgba(30,36,25,0.10);
+}
+.werken__title {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--olive-mute);
+  margin: var(--s-3) 0 0;
+}
+.werken__body {
+  font-family: var(--font-display);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-on-cream-soft);
+  margin: var(--s-4) 0 0;
+  max-width: 52ch;
+}
+.werken__detail { margin-top: var(--s-6); }
+.werken__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(184,156,90,0.22);
+}
+.werken__list li {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--ink-on-cream-soft);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(184,156,90,0.14);
+}
+.werken__contact {
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-on-cream-soft);
+  margin: var(--s-5) 0 0;
+}
+.werken__contact a {
+  color: var(--gold-soft);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(184,156,90,0.45);
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.werken__contact a:hover { color: var(--gold); border-color: var(--gold); }
+@media (max-width: 900px) {
+  .werken__inner {
+    grid-template-columns: 1fr;
+    gap: var(--s-6);
+    padding: var(--s-7) var(--s-5);
+  }
+  .werken__photo { aspect-ratio: 3 / 2; }
+}
+
 .quick-links {
   display: flex;
   justify-content: center;
@@ -1578,6 +1653,23 @@ img, .photo-frame { max-width: 100%; }
   }
   .nav__group--right { margin-left: 0; }
   .nav__toggle { display: flex; }
+  /* Mobiel: logo en hamburger vormen een blok rechts in de balk.
+     De sub-regel vervalt — het logobestand zegt zelf al "Italian Restaurant · Bar". */
+  .nav__inner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--s-4);
+    padding: 0 var(--s-5);
+  }
+  .nav__brand {
+    flex-direction: row;
+    align-items: center;
+    justify-self: auto;
+    gap: 0;
+  }
+  .nav__brand-sub { display: none; }
+  .nav__logo { max-height: 32px; }
   .hero__actions { flex-direction: column; width: 100%; }
   .hero__actions .btn { width: 100%; }
   .gallery { grid-template-columns: 1fr; }
